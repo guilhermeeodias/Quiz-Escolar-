@@ -12,8 +12,8 @@ import {
   FileText, 
   GraduationCap, 
   Loader2,
-  Trophy,
-  ArrowRight
+  //Trophy,
+  //ArrowRight
 } from 'lucide-react';
 
 type Difficulty = 'Fácil' | 'Médio' | 'Difícil';
