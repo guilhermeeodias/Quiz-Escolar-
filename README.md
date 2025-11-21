@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+Quiz Escolar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MVP desenvolvido para facilitar a vida de professores e engajar alunos. A ideia é simples: o professor cola o material da aula (texto), e a IA gera automaticamente um quiz gamificado estilo Duolingo.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React + Vite
 
-## React Compiler
+TypeScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tailwind CSS
 
-## Expanding the ESLint configuration
+Google Gemini API 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Como rodar localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone o repositório:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+git clone [https://github.com/SEU_USUARIO/NOME_DO_REPO.git](https://github.com/SEU_USUARIO/NOME_DO_REPO.git)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+Configure a API Key:
+Crie um arquivo .env na raiz do projeto e cole sua chave do Gemini (Google AI Studio):
+
+VITE_GEMINI_API_KEY=sua_chave_aqui
+
+
+Rode o projeto:
+
+npm run dev
+
+
+Funcionalidades Atuais
+
+[x] Input de texto para material de estudo
+
+[x] Configuração de dificuldade e quantidade de questões
+
+[x] Geração de perguntas via IA (JSON estruturado)
+
+[x] Interface de jogo com feedback instantâneo
+
+[x] Tela de resultados com pontuação
+
+Próximos Passos
+
+Upload direto de PDF/Word
+
+Login de alunos e professores
+
+Ranking global da turma
